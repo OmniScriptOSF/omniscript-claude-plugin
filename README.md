@@ -1,41 +1,87 @@
 # OmniScript Plugin for Claude Code
 
-A comprehensive Claude Code plugin providing full OmniScript (OSF) support for creating, validating, formatting, and exporting universal documents.
+<div align="center">
+
+# 🤖 Claude Code Plugin for OSF
+
+**Create, validate, lint, format & export universal documents directly from Claude Code**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-blueviolet.svg)](https://code.claude.com/docs/en/plugins)
+[![OmniScript](https://img.shields.io/badge/OmniScript-v1.2-green.svg)](https://omniscriptosf.github.io)
+
+[🚀 Quick Start](#-quick-start) • [📦 Installation](#-installation) •
+[⚡ Commands](#-commands) • [🧠 Skills](#-skills) •
+[🤖 Agents](#-agents) • [📖 Documentation](https://omniscriptosf.github.io)
+
+</div>
+
+---
 
 ## Overview
 
-OmniScript (OSF) is a universal document DSL that lets you write plain-text `.osf` files and export them to **PDF**, **DOCX**, **PPTX**, **XLSX**, and **HTML**. This plugin brings OSF capabilities directly into Claude Code conversations.
+OmniScript (OSF) is a universal document DSL that lets you write plain-text `.osf` files and export them to **PDF**, **DOCX**, **PPTX**, **XLSX**, and **HTML**. This plugin brings full OSF capabilities directly into Claude Code conversations.
 
-## Features
+## ✨ Features
 
-- **Commands**: User-invoked slash commands for document operations
-- **Skills**: Agent-accessible knowledge about OSF syntax and best practices
-- **Agents**: Specialized agents for document generation and conversion
-- **Templates**: Ready-to-use document templates
-- **Examples**: Reference examples for all block types
+- **9 Commands** — Slash commands for all document operations
+- **3 Skills** — Agent-accessible knowledge about OSF syntax and best practices
+- **2 Agents** — Specialized agents for document generation and conversion
+- **4 Templates** — Ready-to-use document templates
+- **8 Examples** — Reference examples for all block types
 
-## Installation
+---
 
-### Option 1: Local Installation
+## 🚀 Quick Start
 
 ```bash
-# Clone or copy the plugin to your plugins directory
-cp -r omniscript-claude-plugin ~/.claude/plugins/
+# 1. Add the marketplace (one-time)
+claude plugin marketplace add OmniScriptOSF/omniscript-claude-plugin
 
-# Or use the plugin-dir flag
+# 2. Install the plugin
+claude plugin install osf@omniscript-marketplace
+
+# 3. Start using!
+/osf:new document
+/osf:lint my-document.osf
+/osf:export-pdf my-document.osf
+```
+
+---
+
+## 📦 Installation
+
+### Option 1: Marketplace Installation (Recommended)
+
+```bash
+# Add the OmniScript marketplace
+claude plugin marketplace add OmniScriptOSF/omniscript-claude-plugin
+
+# Install the OSF plugin
+claude plugin install osf@omniscript-marketplace
+```
+
+### Option 2: Local Installation
+
+```bash
+# Clone the plugin
+git clone https://github.com/OmniScriptOSF/omniscript-claude-plugin.git
+
+# Use with plugin-dir flag
 claude --plugin-dir /path/to/omniscript-claude-plugin
 ```
 
-### Option 2: Project-Level Installation
-
-Add the plugin directory to your project:
+### Option 3: Project-Level Installation
 
 ```bash
 # In your project root
-cp -r /path/to/omniscript-claude-plugin ./.claude-plugins/osf
+git clone https://github.com/OmniScriptOSF/omniscript-claude-plugin.git .claude-plugins/osf
 ```
 
-## Commands
+---
+
+## ⚡ Commands
 
 | Command | Description | Example |
 |---------|-------------|---------|
@@ -60,17 +106,22 @@ cp -r /path/to/omniscript-claude-plugin ./.claude-plugins/osf
 
 # Export to PDF with corporate theme
 /osf:export-pdf report.osf --theme corporate --output quarterly-report.pdf
+
+# Compare two versions
+/osf:diff report-v1.osf report-v2.osf
 ```
 
-## Skills
+---
 
-The plugin provides three skills that Claude can access automatically:
+## 🧠 Skills
+
+The plugin provides three skills that Claude accesses automatically:
 
 ### osf-syntax
 
 Complete OSF syntax reference including all block types, properties, and examples. Triggered when you ask about:
 - OSF syntax or structure
-- Block types (@meta, @doc, @slide, etc.)
+- Block types (`@meta`, `@doc`, `@slide`, `@sheet`, `@chart`, `@diagram`, `@table`, `@code`)
 - How to write OSF documents
 
 ### osf-troubleshooting
@@ -87,7 +138,9 @@ Document patterns and guidelines. Triggered when:
 - Organizing document structure
 - Optimizing for specific export formats
 
-## Agents
+---
+
+## 🤖 Agents
 
 ### osf-generator
 
@@ -109,36 +162,45 @@ Convert existing documents to OSF format.
 "Turn this text into an OSF document"
 ```
 
-## Templates
+---
+
+## 📄 Templates
 
 Ready-to-use templates in the `templates/` directory:
 
 | Template | Purpose | Primary Blocks |
 |----------|---------|----------------|
-| `document.osf` | Basic document | @meta, @doc |
-| `presentation.osf` | Slide deck | @meta, @slide |
-| `spreadsheet.osf` | Data workbook | @meta, @sheet, @chart |
-| `report.osf` | Combined report | @meta, @doc, @chart, @table |
+| `document.osf` | Basic document | `@meta`, `@doc` |
+| `presentation.osf` | Slide deck | `@meta`, `@slide` |
+| `spreadsheet.osf` | Data workbook | `@meta`, `@sheet`, `@chart` |
+| `report.osf` | Combined report | `@meta`, `@doc`, `@chart`, `@table` |
 
-## Examples
+---
 
-Example files demonstrating each block type:
+## 📚 Examples
 
-- `examples/meta-block.osf` - Document metadata
-- `examples/doc-block.osf` - Rich text content
-- `examples/slide-block.osf` - Presentation slides
-- `examples/sheet-block.osf` - Spreadsheet data
-- `examples/chart-block.osf` - Data visualizations
-- `examples/diagram-block.osf` - Mermaid/Graphviz diagrams
-- `examples/table-block.osf` - Styled tables
-- `examples/code-block.osf` - Syntax-highlighted code
+Example files demonstrating each block type in the `examples/` directory:
 
-## Directory Structure
+| File | Block Type | Description |
+|------|------------|-------------|
+| `meta-block.osf` | `@meta` | Document metadata |
+| `doc-block.osf` | `@doc` | Rich text content with Markdown |
+| `slide-block.osf` | `@slide` | Presentation slides with layouts |
+| `sheet-block.osf` | `@sheet` | Spreadsheet data |
+| `chart-block.osf` | `@chart` | Bar, line, pie charts |
+| `diagram-block.osf` | `@diagram` | Mermaid/Graphviz diagrams |
+| `table-block.osf` | `@table` | Styled markdown tables |
+| `code-block.osf` | `@code` | Syntax-highlighted code |
+
+---
+
+## 📁 Directory Structure
 
 ```
 omniscript-claude-plugin/
 ├── .claude-plugin/
-│   └── plugin.json           # Plugin manifest
+│   ├── plugin.json           # Plugin manifest
+│   └── marketplace.json      # Marketplace definition
 ├── commands/                  # Slash commands
 │   ├── new/SKILL.md
 │   ├── parse/SKILL.md
@@ -163,33 +225,34 @@ omniscript-claude-plugin/
 │   ├── presentation.osf
 │   ├── spreadsheet.osf
 │   └── report.osf
-├── examples/                  # Block examples
-│   ├── meta-block.osf
-│   ├── doc-block.osf
-│   ├── slide-block.osf
-│   ├── sheet-block.osf
-│   ├── chart-block.osf
-│   ├── diagram-block.osf
-│   ├── table-block.osf
-│   └── code-block.osf
-└── README.md
+└── examples/                  # Block examples
+    ├── meta-block.osf
+    ├── doc-block.osf
+    ├── slide-block.osf
+    ├── sheet-block.osf
+    ├── chart-block.osf
+    ├── diagram-block.osf
+    ├── table-block.osf
+    └── code-block.osf
 ```
 
-## Dependencies
+---
 
-This plugin requires the OmniScript CLI to be installed and available:
+## 🔧 Dependencies
+
+This plugin uses the OmniScript CLI tools. For full functionality, ensure these are available:
 
 ```bash
-# Required: omniscript-core with CLI
+# Core parser and CLI
 /root/code/OmniScriptOSF/omniscript-core/
 
-# For export functionality: omniscript-converters
+# Export converters
 /root/code/OmniScriptOSF/omniscript-converters/
 ```
 
 ### Export Dependencies
 
-For full export functionality, ensure these packages are installed:
+For full export functionality:
 
 ```bash
 cd /root/code/OmniScriptOSF/omniscript-core
@@ -201,26 +264,9 @@ bun add pptxgenjs     # PPTX export
 bun add exceljs       # XLSX export
 ```
 
-## Quick Start
+---
 
-1. **Create a new document**:
-   ```
-   /osf:new document
-   ```
-
-2. **Edit the generated file** with your content
-
-3. **Validate the syntax**:
-   ```
-   /osf:lint my-document.osf
-   ```
-
-4. **Export to your desired format**:
-   ```
-   /osf:export-pdf my-document.osf
-   ```
-
-## Getting Help
+## 💬 Getting Help
 
 Ask Claude about OSF at any time:
 - "How do I create a chart in OSF?"
@@ -230,19 +276,30 @@ Ask Claude about OSF at any time:
 
 The plugin skills will automatically provide relevant information.
 
-## Contributing
+---
+
+## 🤝 Contributing
 
 Contributions welcome! The plugin follows Claude Code plugin conventions:
+
 - Commands go in `commands/{name}/SKILL.md`
 - Skills go in `skills/{name}/SKILL.md`
 - Agents go in `agents/{name}.md`
 
-## License
+See the [Claude Code Plugin Documentation](https://code.claude.com/docs/en/plugins) for details.
 
-MIT License - see the OmniScriptOSF project for details.
+---
 
-## Links
+## 📜 License
+
+MIT License - see the [OmniScriptOSF project](https://github.com/OmniScriptOSF) for details.
+
+---
+
+## 🔗 Links
 
 - [OmniScript Documentation](https://omniscriptosf.github.io)
-- [OmniScript Core Repository](https://github.com/omniscriptosf/omniscript-core)
+- [OmniScript Core Repository](https://github.com/OmniScriptOSF/omniscript-core)
+- [OmniScript Converters](https://github.com/OmniScriptOSF/omniscript-converters)
+- [OmniScript Examples](https://github.com/OmniScriptOSF/omniscript-examples)
 - [Claude Code Plugin Documentation](https://code.claude.com/docs/en/plugins)
