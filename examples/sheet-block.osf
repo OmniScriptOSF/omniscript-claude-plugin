@@ -1,0 +1,88 @@
+// Example: @sheet block
+// Spreadsheet data for Excel export
+
+@meta {
+  title: "@sheet Block Examples";
+  author: "OmniScript Team";
+  date: "2026-01-22";
+}
+
+// Basic data sheet
+@sheet {
+  name: "Basic Data";
+  columns: ["ID", "Name", "Department", "Salary"];
+  rows: [
+    [1001, "Alice Johnson", "Engineering", 95000],
+    [1002, "Bob Smith", "Marketing", 75000],
+    [1003, "Carol Williams", "Finance", 85000],
+    [1004, "David Brown", "Engineering", 92000],
+    [1005, "Eva Martinez", "Sales", 70000]
+  ];
+}
+
+// Sheet with different data types
+@sheet {
+  name: "Data Types";
+  columns: ["Type", "Example", "Notes"];
+  rows: [
+    ["String", "Hello World", "Text values in quotes"],
+    ["Number", 42, "No quotes needed"],
+    ["Decimal", 3.14159, "Decimal numbers"],
+    ["Boolean", true, "true or false"],
+    ["Date", "2026-01-22", "ISO format string"]
+  ];
+}
+
+// Sheet with formulas
+@sheet {
+  name: "Calculations";
+  columns: ["Item", "Quantity", "Unit Price", "Total"];
+  rows: [
+    ["Widget A", 10, 25.00, "=B2*C2"],
+    ["Widget B", 5, 45.00, "=B3*C3"],
+    ["Widget C", 8, 30.00, "=B4*C4"],
+    ["Subtotal", "", "", "=SUM(D2:D4)"],
+    ["Tax (10%)", "", "", "=D5*0.1"],
+    ["Grand Total", "", "", "=D5+D6"]
+  ];
+}
+
+// Financial data sheet
+@sheet {
+  name: "Budget";
+  columns: ["Category", "Q1", "Q2", "Q3", "Q4", "Total"];
+  rows: [
+    ["Revenue", 100000, 110000, 105000, 120000, "=SUM(B2:E2)"],
+    ["COGS", 40000, 44000, 42000, 48000, "=SUM(B3:E3)"],
+    ["Gross Profit", "=B2-B3", "=C2-C3", "=D2-D3", "=E2-E3", "=SUM(B4:E4)"],
+    ["Operating Expenses", 30000, 32000, 31000, 35000, "=SUM(B5:E5)"],
+    ["Net Income", "=B4-B5", "=C4-C5", "=D4-D5", "=E4-E5", "=SUM(B6:E6)"]
+  ];
+}
+
+// Employee directory
+@sheet {
+  name: "Directory";
+  columns: ["Name", "Title", "Email", "Phone", "Location"];
+  rows: [
+    ["Alice Johnson", "Senior Engineer", "alice@company.com", "555-0101", "New York"],
+    ["Bob Smith", "Marketing Manager", "bob@company.com", "555-0102", "Chicago"],
+    ["Carol Williams", "Finance Director", "carol@company.com", "555-0103", "New York"],
+    ["David Brown", "Staff Engineer", "david@company.com", "555-0104", "San Francisco"],
+    ["Eva Martinez", "Sales Rep", "eva@company.com", "555-0105", "Los Angeles"]
+  ];
+}
+
+// Time series data
+@sheet {
+  name: "Monthly Metrics";
+  columns: ["Month", "Users", "Sessions", "Conversion Rate"];
+  rows: [
+    ["2026-01", 10000, 45000, 0.032],
+    ["2026-02", 11500, 52000, 0.035],
+    ["2026-03", 12800, 58000, 0.038],
+    ["2026-04", 13200, 61000, 0.041],
+    ["2026-05", 14500, 67000, 0.039],
+    ["2026-06", 15000, 72000, 0.042]
+  ];
+}

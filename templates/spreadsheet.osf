@@ -1,0 +1,61 @@
+// OmniScript Spreadsheet Template
+// A data workbook structure for tables, calculations, and data analysis
+
+@meta {
+  title: "Spreadsheet Title";
+  author: "Author Name";
+  date: "2026-01-22";
+  version: "1.0";
+}
+
+// Main data sheet
+@sheet {
+  name: "Data";
+  columns: ["ID", "Name", "Category", "Value", "Date"];
+  rows: [
+    [1, "Item A", "Category 1", 100, "2026-01-01"],
+    [2, "Item B", "Category 1", 150, "2026-01-05"],
+    [3, "Item C", "Category 2", 200, "2026-01-10"],
+    [4, "Item D", "Category 2", 175, "2026-01-15"],
+    [5, "Item E", "Category 1", 125, "2026-01-20"]
+  ];
+}
+
+// Summary sheet with formulas
+@sheet {
+  name: "Summary";
+  columns: ["Metric", "Value"];
+  rows: [
+    ["Total Items", 5],
+    ["Total Value", "=SUM(Data!D2:D6)"],
+    ["Average Value", "=AVERAGE(Data!D2:D6)"],
+    ["Minimum Value", "=MIN(Data!D2:D6)"],
+    ["Maximum Value", "=MAX(Data!D2:D6)"]
+  ];
+}
+
+// Category breakdown
+@sheet {
+  name: "By Category";
+  columns: ["Category", "Count", "Total Value", "Average"];
+  rows: [
+    ["Category 1", 3, 375, 125],
+    ["Category 2", 2, 375, 187.5],
+    ["Grand Total", 5, 750, 150]
+  ];
+}
+
+// Optional: Chart of the data
+@chart {
+  type: "bar";
+  title: "Values by Item";
+  data: {
+    labels: ["Item A", "Item B", "Item C", "Item D", "Item E"];
+    datasets: [
+      {
+        label: "Value";
+        values: [100, 150, 200, 175, 125];
+      }
+    ];
+  };
+}

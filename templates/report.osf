@@ -1,0 +1,136 @@
+// OmniScript Report Template
+// A comprehensive report combining narrative, data, and visualizations
+
+@meta {
+  title: "Quarterly Report";
+  author: "Report Author";
+  date: "2026-01-22";
+  version: "1.0";
+}
+
+@doc {
+  # Executive Summary
+
+  This report covers the key performance metrics and insights for the
+  reporting period. The following sections provide detailed analysis
+  of results, trends, and recommendations.
+
+  **Key Highlights:**
+  - Metric 1: Result and trend
+  - Metric 2: Result and trend
+  - Metric 3: Result and trend
+}
+
+@doc {
+  # Performance Overview
+
+  This section provides a high-level view of performance against targets
+  and comparison to previous periods.
+}
+
+// Key metrics chart
+@chart {
+  type: "bar";
+  title: "Monthly Performance";
+  data: [
+    { label: "Actual"; values: [85, 92, 88]; },
+    { label: "Target"; values: [80, 85, 90]; }
+  ];
+}
+
+// Summary table
+@table {
+  caption: "Performance Summary";
+  style: "striped";
+
+  | Metric | Target | Actual | Variance | Status |
+  | --- | --- | --- | --- | --- |
+  | Revenue | $100K | $105K | +5% | On Track |
+  | Customers | 500 | 520 | +4% | On Track |
+  | Satisfaction | 90% | 88% | -2% | Monitor |
+  | Efficiency | 85% | 87% | +2% | On Track |
+}
+
+@doc {
+  # Detailed Analysis
+
+  ## Revenue Performance
+
+  Revenue exceeded targets by 5%, driven primarily by strong performance
+  in the enterprise segment. Key contributing factors include:
+
+  - New customer acquisitions
+  - Expansion within existing accounts
+  - Improved conversion rates
+
+  ## Customer Growth
+
+  Customer count grew 4% above target, with particular strength in
+  the mid-market segment.
+}
+
+// Trend chart
+@chart {
+  type: "line";
+  title: "Revenue Trend";
+  data: [
+    { label: "This Year"; values: [30, 35, 40, 38, 42, 45]; },
+    { label: "Last Year"; values: [25, 28, 32, 35, 36, 38]; }
+  ];
+}
+
+@doc {
+  # Breakdown by Segment
+
+  The following table shows performance across different business segments.
+}
+
+// Segment data
+@table {
+  caption: "Performance by Segment";
+  style: "bordered";
+
+  | Segment | Revenue | Growth | Margin |
+  | --- | --- | --- | --- |
+  | Enterprise | $45K | +12% | 35% |
+  | Mid-Market | $35K | +8% | 28% |
+  | SMB | $25K | +3% | 22% |
+  | Total | $105K | +5% | 29% |
+}
+
+@doc {
+  # Recommendations
+
+  Based on the analysis above, we recommend the following actions:
+
+  1. **Invest in Enterprise** - Continue focus on enterprise segment
+     given strong growth and margins
+
+  2. **Address Satisfaction** - Investigate drivers of satisfaction
+     decline and implement improvement plan
+
+  3. **Expand Mid-Market** - Replicate enterprise success in
+     mid-market with targeted campaigns
+
+  ## Next Steps
+
+  - Schedule review meeting with leadership
+  - Develop action plans for each recommendation
+  - Set milestones for next quarter
+}
+
+@doc {
+  # Appendix
+
+  ## Methodology
+
+  Data in this report is sourced from internal systems and covers
+  the period from Month 1 to Month 3 of the fiscal year.
+
+  ## Definitions
+
+  - **Revenue**: Net recognized revenue
+  - **Customers**: Active accounts with billing
+  - **Satisfaction**: NPS score
+  - **Efficiency**: Operational efficiency metric
+}

@@ -1,0 +1,119 @@
+// Example: @slide block
+// Presentation slides with various layouts
+
+@meta {
+  title: "@slide Block Examples";
+  author: "OmniScript Team";
+  date: "2026-01-22";
+}
+
+// Title slide layout
+@slide {
+  layout: "title";
+  title: "Main Presentation Title";
+  subtitle: "Subtitle or Tagline Goes Here";
+  notes: "Welcome everyone. Today we'll be discussing...";
+}
+
+// Content slide with bullet points
+@slide {
+  layout: "content";
+  title: "Bullet Point Slide";
+  content: '''
+    - First key point to discuss
+    - Second important item
+    - Third point with details
+    - Final point to emphasize
+  ''';
+  notes: "Expand on each point with real-world examples";
+}
+
+// Two-column layout for comparisons
+@slide {
+  layout: "two-column";
+  title: "Side-by-Side Comparison";
+  left: '''
+    **Before**
+    - Manual processes
+    - Time-consuming
+    - Error-prone
+    - Limited scale
+  ''';
+  right: '''
+    **After**
+    - Automated workflows
+    - Fast execution
+    - Consistent results
+    - Unlimited scale
+  ''';
+}
+
+// Image slide
+@slide {
+  layout: "image";
+  title: "Visual Example";
+  image: "./images/diagram.png";
+  caption: "Architecture overview diagram";
+  notes: "Walk through each component of the diagram";
+}
+
+// Section divider slide
+@slide {
+  layout: "section";
+  title: "Deep Dive Section";
+}
+
+// Blank slide for custom content
+@slide {
+  layout: "blank";
+  title: "Custom Content";
+  content: '''
+    This slide has no predefined structure.
+    Use it for custom layouts or special content.
+
+    You have full control over the content placement.
+  ''';
+}
+
+// Content slide with more detail
+@slide {
+  layout: "content";
+  title: "Detailed Analysis";
+  content: '''
+    ## Key Findings
+
+    1. **Finding One**: Description of first finding
+    2. **Finding Two**: Description of second finding
+    3. **Finding Three**: Description of third finding
+
+    > Important: Note this key insight
+  ''';
+  notes: "Reference the data sources for each finding";
+}
+
+// Slide with background customization
+@slide {
+  layout: "title";
+  title: "Styled Slide";
+  subtitle: "With Custom Background";
+  background: "#1a365d";
+}
+
+// Summary slide
+@slide {
+  layout: "content";
+  title: "Key Takeaways";
+  content: '''
+    - **Takeaway 1**: Summary of main point
+    - **Takeaway 2**: Second important message
+    - **Takeaway 3**: Final thought to remember
+  ''';
+}
+
+// Closing slide
+@slide {
+  layout: "title";
+  title: "Thank You";
+  subtitle: "Questions & Discussion";
+  notes: "Open the floor for questions. Have backup slides ready.";
+}

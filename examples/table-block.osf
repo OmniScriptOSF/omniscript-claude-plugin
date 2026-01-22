@@ -1,0 +1,113 @@
+// Example: @table block
+// Styled tables for documents and presentations
+// Uses markdown-style pipe syntax for rows
+
+@meta {
+  title: "@table Block Examples";
+  author: "OmniScript Team";
+  date: "2026-01-22";
+}
+
+// Basic table
+@table {
+  | Name | Role | Department |
+  | --- | --- | --- |
+  | Alice Johnson | Engineer | Development |
+  | Bob Smith | Designer | UX |
+  | Carol Williams | Manager | Operations |
+}
+
+// Table with caption
+@table {
+  caption: "Team Members";
+
+  | Name | Role | Department | Location |
+  | --- | --- | --- | --- |
+  | Alice Johnson | Senior Engineer | Engineering | New York |
+  | Bob Smith | Lead Designer | Design | San Francisco |
+  | Carol Williams | Product Manager | Product | Chicago |
+  | David Brown | QA Engineer | Quality | New York |
+}
+
+// Striped table style
+@table {
+  caption: "Monthly Sales";
+  style: "striped";
+
+  | Month | Units Sold | Revenue | Growth |
+  | --- | --- | --- | --- |
+  | January | 1200 | $48,000 | +5% |
+  | February | 1350 | $54,000 | +12.5% |
+  | March | 1400 | $56,000 | +3.7% |
+  | April | 1500 | $60,000 | +7.1% |
+  | May | 1650 | $66,000 | +10% |
+}
+
+// Bordered table style
+@table {
+  caption: "Feature Comparison";
+  style: "bordered";
+
+  | Feature | Basic | Pro | Enterprise |
+  | --- | --- | --- | --- |
+  | Users | 5 | 25 | Unlimited |
+  | Storage | 10 GB | 100 GB | 1 TB |
+  | API Access | No | Yes | Yes |
+  | Support | Email | Priority | 24/7 |
+  | SSO | No | No | Yes |
+  | Price | $10/mo | $50/mo | Custom |
+}
+
+// Minimal table style
+@table {
+  caption: "Quick Stats";
+  style: "minimal";
+
+  | Metric | Value |
+  | --- | --- |
+  | Total Users | 15,432 |
+  | Active Today | 2,891 |
+  | Revenue MTD | $125,000 |
+  | Churn Rate | 2.1% |
+}
+
+// Table with column alignment
+@table {
+  caption: "Financial Summary";
+  style: "striped";
+  alignment: ["left", "right", "right", "right"];
+
+  | Category | Budget | Actual | Variance |
+  | --- | --- | --- | --- |
+  | Revenue | $500,000 | $525,000 | +$25,000 |
+  | Expenses | $400,000 | $385,000 | -$15,000 |
+  | Net Income | $100,000 | $140,000 | +$40,000 |
+}
+
+// Technical specifications table
+@table {
+  caption: "System Requirements";
+  style: "bordered";
+
+  | Component | Minimum | Recommended |
+  | --- | --- | --- |
+  | CPU | 2 cores | 4 cores |
+  | RAM | 4 GB | 8 GB |
+  | Storage | 20 GB SSD | 50 GB SSD |
+  | Network | 100 Mbps | 1 Gbps |
+  | OS | Ubuntu 20.04 | Ubuntu 22.04 |
+}
+
+// Schedule table
+@table {
+  caption: "Project Milestones";
+  style: "striped";
+
+  | Phase | Start Date | End Date | Status |
+  | --- | --- | --- | --- |
+  | Planning | 2026-01-01 | 2026-01-15 | Complete |
+  | Design | 2026-01-16 | 2026-02-01 | Complete |
+  | Development | 2026-02-02 | 2026-03-15 | In Progress |
+  | Testing | 2026-03-16 | 2026-03-31 | Pending |
+  | Launch | 2026-04-01 | 2026-04-05 | Pending |
+}

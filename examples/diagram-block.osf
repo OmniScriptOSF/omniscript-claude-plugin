@@ -1,0 +1,126 @@
+// Example: @diagram block
+// Diagrams using Mermaid and Graphviz
+// Uses type (flowchart/sequence/gantt/mindmap), engine (mermaid/graphviz), code, title
+
+@meta {
+  title: "Diagram Block Examples";
+  author: "OmniScript Team";
+  date: "2026-01-22";
+}
+
+// Mermaid flowchart
+@diagram {
+  type: "flowchart";
+  engine: "mermaid";
+  title: "User Registration Flow";
+  code: "graph TD
+    A[User visits site] --> B{Has account?}
+    B -->|Yes| C[Login page]
+    B -->|No| D[Registration form]
+    D --> E[Submit details]
+    E --> F{Valid data?}
+    F -->|Yes| G[Send verification email]
+    F -->|No| D
+    G --> H[User clicks link]
+    H --> I[Account activated]
+    C --> J[Dashboard]
+    I --> J";
+}
+
+// Mermaid sequence diagram
+@diagram {
+  type: "sequence";
+  engine: "mermaid";
+  title: "API Authentication Flow";
+  code: "sequenceDiagram
+    participant C as Client
+    participant A as Auth Server
+    participant R as Resource Server
+    C->>A: POST /login (credentials)
+    A->>A: Validate credentials
+    A-->>C: JWT Access Token
+    C->>R: GET /api/data (with token)
+    R->>R: Validate token
+    R-->>C: Protected data";
+}
+
+// Mermaid Gantt chart
+@diagram {
+  type: "gantt";
+  engine: "mermaid";
+  title: "Project Timeline";
+  code: "gantt
+    title Project Development Schedule
+    dateFormat YYYY-MM-DD
+    section Planning
+    Requirements     :a1, 2026-01-01, 7d
+    Design           :a2, after a1, 10d
+    section Development
+    Backend          :b1, after a2, 20d
+    Frontend         :b2, after a2, 18d
+    section Testing
+    QA Testing       :c1, after b1, 10d";
+}
+
+// Mermaid mindmap
+@diagram {
+  type: "mindmap";
+  engine: "mermaid";
+  title: "Project Structure";
+  code: "mindmap
+  root((Project))
+    Frontend
+      React
+      TypeScript
+      Tailwind
+    Backend
+      Node.js
+      PostgreSQL
+      Redis
+    DevOps
+      Docker
+      CI/CD";
+}
+
+// Graphviz flowchart
+@diagram {
+  type: "flowchart";
+  engine: "graphviz";
+  title: "System Architecture";
+  code: "digraph Architecture {
+    rankdir=LR;
+    node [shape=box];
+    Client -> LoadBalancer;
+    LoadBalancer -> API1;
+    LoadBalancer -> API2;
+    API1 -> Cache;
+    API2 -> Cache;
+    API1 -> DB;
+    API2 -> DB;
+  }";
+}
+
+// Graphviz sequence style
+@diagram {
+  type: "sequence";
+  engine: "graphviz";
+  title: "Data Pipeline";
+  code: "digraph Pipeline {
+    rankdir=TB;
+    node [shape=box];
+    Sources -> Ingest;
+    Ingest -> Transform;
+    Transform -> Store;
+    Store -> Analytics;
+    Analytics -> Dashboard;
+  }";
+}
+
+// Simple flowchart
+@diagram {
+  type: "flowchart";
+  engine: "mermaid";
+  code: "graph LR
+    A[Input] --> B[Process]
+    B --> C[Output]";
+}

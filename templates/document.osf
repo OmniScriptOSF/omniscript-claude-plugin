@@ -1,0 +1,56 @@
+// OmniScript Document Template
+// A basic document structure for reports, articles, and written content
+
+@meta {
+  title: "Document Title";
+  author: "Author Name";
+  date: "2026-01-22";
+  version: "1.0";
+}
+
+@doc {
+  # Introduction
+
+  Welcome to this document. This template provides a starting structure
+  for creating written content like reports, articles, and documentation.
+
+  ## Purpose
+
+  Describe the purpose of this document here. What will readers learn
+  or accomplish by reading this?
+}
+
+@doc {
+  # Main Content
+
+  This is where your main content goes. You can use **bold** and *italic*
+  formatting, as well as:
+
+  - Bullet lists
+  - For quick points
+  - And easy reading
+
+  Or numbered lists:
+
+  1. First step or point
+  2. Second step or point
+  3. Third step or point
+
+  ### Subsections
+
+  Break your content into logical subsections using headings.
+
+  > You can also use blockquotes for important callouts or citations.
+}
+
+@doc {
+  # Conclusion
+
+  Summarize the key points and provide any next steps or
+  recommendations for the reader.
+
+  ## References
+
+  - [Reference 1](https://example.com)
+  - [Reference 2](https://example.com)
+}

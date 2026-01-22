@@ -1,0 +1,111 @@
+// OmniScript Presentation Template
+// A slide deck structure for presentations and pitches
+
+@meta {
+  title: "Presentation Title";
+  author: "Presenter Name";
+  date: "2026-01-22";
+  version: "1.0";
+}
+
+// Title slide
+@slide {
+  layout: "title";
+  title: "Presentation Title";
+  subtitle: "Subtitle or Tagline";
+  notes: "Welcome the audience and introduce yourself";
+}
+
+// Agenda slide
+@slide {
+  layout: "content";
+  title: "Agenda";
+  content: '''
+    - Introduction
+    - Key Topic 1
+    - Key Topic 2
+    - Key Topic 3
+    - Summary & Q&A
+  ''';
+  notes: "Brief overview of what we'll cover today";
+}
+
+// Content slide with bullet points
+@slide {
+  layout: "content";
+  title: "Key Topic 1";
+  content: '''
+    - First important point
+    - Second important point
+    - Third important point
+    - Fourth important point
+  ''';
+  notes: "Expand on each point with examples";
+}
+
+// Two-column comparison slide
+@slide {
+  layout: "two-column";
+  title: "Comparison";
+  left: '''
+    **Option A**
+    - Advantage 1
+    - Advantage 2
+    - Advantage 3
+  ''';
+  right: '''
+    **Option B**
+    - Advantage 1
+    - Advantage 2
+    - Advantage 3
+  ''';
+  notes: "Highlight the key differences between options";
+}
+
+// Content slide for another topic
+@slide {
+  layout: "content";
+  title: "Key Topic 2";
+  content: '''
+    - Main insight or finding
+    - Supporting evidence
+    - Implications
+  ''';
+}
+
+// Section divider
+@slide {
+  layout: "section";
+  title: "Deep Dive";
+}
+
+// Content slide with more detail
+@slide {
+  layout: "content";
+  title: "Key Topic 3";
+  content: '''
+    - Detailed analysis point
+    - Data-driven insight
+    - Recommended action
+  ''';
+}
+
+// Summary slide
+@slide {
+  layout: "content";
+  title: "Summary";
+  content: '''
+    - Key takeaway 1
+    - Key takeaway 2
+    - Key takeaway 3
+  ''';
+  notes: "Reinforce the main messages";
+}
+
+// Closing slide
+@slide {
+  layout: "title";
+  title: "Thank You";
+  subtitle: "Questions?";
+  notes: "Open the floor for questions";
+}

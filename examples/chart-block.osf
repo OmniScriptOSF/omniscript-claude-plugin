@@ -1,0 +1,108 @@
+// Example: @chart block
+// Data visualizations with various chart types
+// Uses data array with label and values properties
+
+@meta {
+  title: "@chart Block Examples";
+  author: "OmniScript Team";
+  date: "2026-01-22";
+}
+
+// Bar chart - comparing categories
+@chart {
+  type: "bar";
+  title: "Quarterly Revenue by Region";
+  data: [
+    { label: "Q1"; values: [45000, 35000, 42000, 38000]; },
+    { label: "Q2"; values: [48000, 38000, 45000, 41000]; }
+  ];
+  options: {
+    legend: true;
+    yAxis: "Revenue (USD)";
+  };
+}
+
+// Line chart - trends over time
+@chart {
+  type: "line";
+  title: "Website Traffic Trend";
+  data: [
+    { label: "Visitors"; values: [12000, 15000, 14500, 18000, 21000, 19500]; },
+    { label: "Page Views"; values: [36000, 45000, 43500, 54000, 63000, 58500]; }
+  ];
+  options: {
+    legend: true;
+    xAxis: "Month";
+    yAxis: "Count";
+  };
+}
+
+// Pie chart - part of whole
+@chart {
+  type: "pie";
+  title: "Market Share Distribution";
+  data: [
+    { label: "Product A"; values: [35]; },
+    { label: "Product B"; values: [30]; },
+    { label: "Product C"; values: [20]; },
+    { label: "Other"; values: [15]; }
+  ];
+  options: {
+    legend: true;
+  };
+}
+
+// Area chart - volume over time
+@chart {
+  type: "area";
+  title: "Cumulative Sales";
+  data: [
+    { label: "Cumulative Revenue"; values: [25000, 58000, 95000, 142000]; }
+  ];
+}
+
+// Scatter plot - correlation
+@chart {
+  type: "scatter";
+  title: "Price vs. Sales Volume";
+  data: [
+    { label: "Products"; values: [850, 720, 600, 480, 350, 280]; }
+  ];
+  options: {
+    xAxis: "Price ($)";
+    yAxis: "Units Sold";
+  };
+}
+
+// Multiple series bar chart
+@chart {
+  type: "bar";
+  title: "Year-over-Year Comparison";
+  data: [
+    { label: "2024"; values: [100, 120, 115, 130]; },
+    { label: "2025"; values: [110, 135, 128, 145]; },
+    { label: "2026"; values: [125, 148, 140, 160]; }
+  ];
+  options: {
+    legend: true;
+    yAxis: "Revenue ($K)";
+  };
+}
+
+// Simple bar chart
+@chart {
+  type: "bar";
+  title: "Monthly Sales";
+  data: [
+    { label: "Sales"; values: [65, 59, 80, 81, 56, 55]; }
+  ];
+}
+
+// Line chart with single series
+@chart {
+  type: "line";
+  title: "Daily Active Users";
+  data: [
+    { label: "DAU"; values: [1200, 1400, 1350, 1500, 1650, 1580, 1700]; }
+  ];
+}

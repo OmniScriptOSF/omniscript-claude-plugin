@@ -1,0 +1,50 @@
+// Example: @meta block
+// The metadata block defines document properties and should be the first block
+
+// Basic @meta with required title
+@meta {
+  title: "My Document";
+}
+
+// Complete @meta with all common properties
+/*
+@meta {
+  title: "Comprehensive Document";
+  author: "Jane Smith";
+  date: "2026-01-22";
+  version: "2.1";
+  language: "en";
+  keywords: ["example", "documentation", "osf"];
+  description: "A comprehensive example showing all @meta properties";
+  category: "examples";
+  theme: "default";
+}
+*/
+
+@doc {
+  # About @meta
+
+  The `@meta` block defines document-level metadata. It should be the
+  first block in any OSF document.
+
+  ## Required Properties
+
+  - `title` - The document title (required)
+
+  ## Optional Properties
+
+  - `author` - Author name
+  - `date` - Publication date (YYYY-MM-DD format)
+  - `version` - Document version string
+  - `language` - ISO 639-1 language code (e.g., "en", "es", "fr")
+  - `keywords` - Array of keyword strings for searchability
+  - `description` - Brief description of the document
+  - `category` - Document category for organization
+  - `theme` - Default theme for exports
+
+  ## Usage Notes
+
+  - Always include at least a title
+  - Date should use ISO format: YYYY-MM-DD
+  - Keywords help with document discovery and SEO
+}

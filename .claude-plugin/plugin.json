@@ -1,0 +1,11 @@
+{
+  "name": "osf",
+  "description": "OmniScript Format (OSF) support - create, validate, and export universal documents to PDF, DOCX, PPTX, XLSX, and HTML",
+  "version": "1.0.0",
+  "author": {
+    "name": "OmniScript Team"
+  },
+  "homepage": "https://omniscriptosf.github.io",
+  "repository": "https://github.com/omniscriptosf/omniscript-claude-plugin",
+  "license": "MIT"
+}

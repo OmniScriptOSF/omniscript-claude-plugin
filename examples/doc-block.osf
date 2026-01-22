@@ -1,0 +1,112 @@
+// Example: @doc block
+// Document content blocks using Markdown syntax
+
+@meta {
+  title: "@doc Block Examples";
+  author: "OmniScript Team";
+  date: "2026-01-22";
+}
+
+// Basic text content
+@doc {
+  # Heading Level 1
+
+  This is a basic paragraph with some text content. The @doc block
+  supports full Markdown syntax for rich text formatting.
+
+  ## Heading Level 2
+
+  You can use **bold text**, *italic text*, and ***bold italic*** for emphasis.
+
+  ### Heading Level 3
+
+  Inline `code` looks like this. You can also include [links](https://example.com).
+}
+
+// Lists and formatting
+@doc {
+  # Lists
+
+  ## Unordered Lists
+
+  - First item
+  - Second item
+    - Nested item
+    - Another nested item
+  - Third item
+
+  ## Ordered Lists
+
+  1. First step
+  2. Second step
+     1. Sub-step A
+     2. Sub-step B
+  3. Third step
+
+  ## Task Lists
+
+  - [x] Completed task
+  - [ ] Pending task
+  - [ ] Another pending task
+}
+
+// Blockquotes and horizontal rules
+@doc {
+  # Quotes and Dividers
+
+  > This is a blockquote. Use it for important callouts,
+  > citations, or to highlight key information.
+
+  ---
+
+  The horizontal rule above creates a visual separator between sections.
+
+  > **Note:** You can combine formatting within blockquotes
+  > for added emphasis.
+}
+
+// Tables in Markdown
+@doc {
+  # Markdown Tables
+
+  | Column 1 | Column 2 | Column 3 |
+  |----------|----------|----------|
+  | Cell 1   | Cell 2   | Cell 3   |
+  | Cell 4   | Cell 5   | Cell 6   |
+
+  Tables support alignment:
+
+  | Left | Center | Right |
+  |:-----|:------:|------:|
+  | L    | C      | R     |
+}
+
+// Images
+@doc {
+  # Images
+
+  Inline images use standard Markdown syntax:
+
+  ![Alt text for image](./images/example.png)
+
+  Images with titles:
+
+  ![Logo](./images/logo.png "Company Logo")
+}
+
+// Multi-line content with triple quotes
+@doc {
+  content: '''
+    # Using Triple Quotes
+
+    For longer content, you can use triple-quoted strings.
+    This preserves formatting and makes the OSF file more readable.
+
+    - Item 1
+    - Item 2
+    - Item 3
+
+    This is especially useful when you have content that
+    spans many lines.
+  ''';
+}

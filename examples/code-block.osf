@@ -1,0 +1,158 @@
+// Example: @code block
+// Syntax-highlighted code snippets
+// Uses language, code, caption, lineNumbers, and highlight properties
+
+@meta {
+  title: "Code Block Examples";
+  author: "OmniScript Team";
+  date: "2026-01-22";
+}
+
+// TypeScript example
+@code {
+  language: "typescript";
+  caption: "api/users.ts";
+  lineNumbers: true;
+  code: "import { Router, Request, Response } from 'express';
+import { z } from 'zod';
+
+const router = Router();
+
+const UserSchema = z.object({
+  name: z.string().min(1),
+  email: z.string().email(),
+});
+
+router.post('/users', async (req: Request, res: Response) => {
+  const result = UserSchema.safeParse(req.body);
+
+  if (!result.success) {
+    return res.status(400).json({ errors: result.error.flatten() });
+  }
+
+  const user = await createUser(result.data);
+  res.status(201).json(user);
+});
+
+export default router;";
+}
+
+// Python example
+@code {
+  language: "python";
+  caption: "app/main.py";
+  code: "from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, EmailStr
+
+app = FastAPI()
+
+class User(BaseModel):
+    name: str
+    email: EmailStr
+
+@app.post('/users/', status_code=201)
+async def create_user(user: User):
+    return {'id': 1, **user.model_dump()}";
+}
+
+// JavaScript example
+@code {
+  language: "javascript";
+  caption: "utils/helpers.js";
+  code: "/**
+ * Format a number as currency
+ */
+export function formatCurrency(value, currency = 'USD') {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency,
+  }).format(value);
+}";
+}
+
+// SQL example
+@code {
+  language: "sql";
+  caption: "migrations/001_create_users.sql";
+  lineNumbers: true;
+  code: "-- Create users table
+CREATE TABLE users (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email VARCHAR(255) UNIQUE NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Create index for email lookups
+CREATE INDEX idx_users_email ON users(email);";
+}
+
+// Bash example
+@code {
+  language: "bash";
+  caption: "deploy.sh";
+  code: "#!/bin/bash
+set -euo pipefail
+
+echo 'Starting deployment...'
+bun run build
+bun test
+docker build -t myapp:latest .
+echo 'Deployment complete!'";
+}
+
+// Go example
+@code {
+  language: "go";
+  caption: "handlers/user.go";
+  code: "package handlers
+
+import (
+    \"encoding/json\"
+    \"net/http\"
+)
+
+type User struct {
+    ID    int    `json:\"id\"`
+    Name  string `json:\"name\"`
+}
+
+func GetUser(w http.ResponseWriter, r *http.Request) {
+    user := User{ID: 1, Name: \"John Doe\"}
+    json.NewEncoder(w).Encode(user)
+}";
+}
+
+// JSON example
+@code {
+  language: "json";
+  caption: "config.json";
+  code: "{
+  \"app\": {
+    \"name\": \"MyApplication\",
+    \"version\": \"1.0.0\",
+    \"port\": 3000
+  },
+  \"database\": {
+    \"host\": \"localhost\",
+    \"port\": 5432
+  }
+}";
+}
+
+// Code with highlighted lines
+@code {
+  language: "typescript";
+  caption: "Important lines highlighted";
+  lineNumbers: true;
+  highlight: [4, 5, 6];
+  code: "function processOrder(order: Order): Result {
+  if (!order.items.length) {
+    return { success: false, error: 'Empty order' };
+  }
+  const total = order.items.reduce(
+    (sum, item) => sum + item.price * item.quantity, 0
+  );
+  return { success: true, total };
+}";
+}
