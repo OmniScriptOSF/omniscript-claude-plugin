@@ -15,7 +15,7 @@
         "name": "OmniScript Team",
         "email": "omniscriptosf@users.noreply.github.com"
       },
-      "source": ".",
+      "source": "./",
       "category": "development",
       "homepage": "https://github.com/OmniScriptOSF/omniscript-claude-plugin"
     }
