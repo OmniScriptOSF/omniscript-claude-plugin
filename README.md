@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-blueviolet.svg)](https://code.claude.com/docs/en/plugins)
-[![OmniScript](https://img.shields.io/badge/OmniScript-v1.2-green.svg)](https://omniscriptosf.github.io)
+[![OmniScript](https://img.shields.io/badge/OmniScript-v1.3-green.svg)](https://omniscriptosf.github.io)
 
 [🚀 Quick Start](#-quick-start) • [📦 Installation](#-installation) •
 [⚡ Commands](#-commands) • [🧠 Skills](#-skills) •
