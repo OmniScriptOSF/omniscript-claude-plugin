@@ -1,8 +1,6 @@
-# OmniScript Plugin for Claude Code
-
 <div align="center">
 
-# 🤖 Claude Code Plugin for OSF
+# 🤖 OmniScript Plugin for Claude Code
 
 **Create, validate, lint, format & export universal documents directly from Claude Code**
 
