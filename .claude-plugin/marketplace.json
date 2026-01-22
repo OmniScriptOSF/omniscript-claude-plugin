@@ -1,13 +1,23 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "omniscript-marketplace",
   "description": "OmniScript Format (OSF) plugins for Claude Code - create, validate, and export universal documents",
-  "version": "1.0.0",
+  "owner": {
+    "name": "OmniScript Team",
+    "email": "omniscriptosf@users.noreply.github.com"
+  },
   "plugins": [
     {
       "name": "osf",
       "description": "OmniScript Format (OSF) support - create, validate, and export universal documents to PDF, DOCX, PPTX, XLSX, and HTML",
-      "source": "github:omniscriptosf/omniscript-claude-plugin",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "author": {
+        "name": "OmniScript Team",
+        "email": "omniscriptosf@users.noreply.github.com"
+      },
+      "source": ".",
+      "category": "development",
+      "homepage": "https://github.com/OmniScriptOSF/omniscript-claude-plugin"
     }
   ]
 }
